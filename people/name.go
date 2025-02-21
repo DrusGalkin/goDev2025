@@ -35,6 +35,14 @@ func (b Builder) Create() *Name {
 	return b.name
 }
 
+func (n Name) GetFIO() string {
+	return n.surname + " " + n.name + " " + n.patronymic
+}
+
+func (n Name) SetName(name string) {
+	n.name = name
+}
+
 func (n Name) Print() {
 	fmt.Printf("%s %s %s\n", n.surname, n.name, n.patronymic)
 }
